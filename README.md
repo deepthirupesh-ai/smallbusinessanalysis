@@ -6,7 +6,7 @@ This project creates a synthetic dataset for a fictional small coffee shop busin
 
 *   `generate_data.py`: A Python script that creates a SQLite database (`coffee_shop.db`) and populates it with realistic fake data (customers, products, transactions).
 *   `analyze_data.py`: A Python script that queries the database, processes the data using Pandas, and generates visualization charts using Matplotlib and Seaborn.
-*   `requirements.txt`: A list of Python libraries required to run the scripts.
+*   `requirement.txt`: A list of Python libraries required to run the scripts.
 *   `analysis_output/`: The folder where generated visualizations are saved.
 
 ## Setup & Installation
@@ -14,7 +14,7 @@ This project creates a synthetic dataset for a fictional small coffee shop busin
 1.  **Prerequisites:** Ensure you have Python installed.
 2.  **Install Dependencies:** Run the following command to install the necessary libraries:
     ```bash
-    pip install -r requirements.txt
+    pip install -r requirement.txt
     ```
 
 ## Usage
@@ -28,12 +28,22 @@ python generate_data.py
 *Output: Creates `coffee_shop.db` with tables for products, customers, transactions, and transaction_items.*
 
 ### 2. Run the Analysis
-Run the analysis script to process the data and generate reports/charts.
+
+**Option A: Static Report (Script)**
+Run the analysis script to process the data and generate reports/charts as images.
 
 ```bash
 python analyze_data.py
 ```
 *Output: Prints general statistics to the console and saves visualization images to the `analysis_output/` folder.*
+
+**Option B: Interactive Dashboard (Streamlit)**
+Launch the interactive web application to explore the data dynamically.
+
+```bash
+streamlit run app.py
+```
+*Output: Opens a browser window with the dashboard.*
 
 ## Database Schema
 
